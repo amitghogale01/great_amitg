@@ -14,7 +14,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/customerService', 'viewM
                 self.editFlag = ko.observable(false);
                 self.dataSource = ko.observable();
                 self.pageHeading = ko.observable();
-                self.listDetail = ko.observable("");
+                self.listDetail = ko.observableArray([""]);
                 self.goToDetail = goToDetail;
                 self.pageHeading(cs.ucText('Customers'));
                 self.bkButton = bkButton;
