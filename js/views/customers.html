@@ -1,0 +1,90 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+-->
+<div class="oj-hybrid-padding">
+
+    <h2 data-bind="text: pageHeading"></h2>
+
+    <oj-list-view id="listView" aria-label="list using json data" 
+                  data="[[dataSource]]" 
+                  selection-mode="single" 
+                  item.renderer="[[oj.KnockoutTemplateUtils.getRenderer('item_template', true)]]">
+    </oj-list-view>
+
+    <script type="text/html" id="item_template">
+        <li>
+
+            <div class="oj-flex" style="flex-wrap: nowrap">
+
+                <div class="oj-flex oj-flex-item demo-content">
+                    <div class ="oj-lg-2 oj-xs-12" >
+                        <a href data-bind = "click:$parent.goToDetail"> <img data-bind="attr:{src: photo}" style="width:100px;height:100px;"></a>
+                    </div>
+                    <div class ="oj-lg-10 oj-xs-12">
+                        <label style="font-weight:bold">ID:</label> <span data-bind="text: customer_id"></span><br>
+                        <label style="font-weight:bold">Name:</label> <span data-bind="text: name"></span><br>
+                        <label style="font-weight:bold">Email:</label> <span data-bind="text: email"></span><br>
+                        <label style="font-weight:bold">Description:</label> <span data-bind="text: customer_details"></span>
+
+                    </div>
+                </div>
+            </div>
+
+        </li>
+    </script>
+
+
+    <div id="listDetail" style="display:none;">
+        <!--         <span style="float:right"><button data-bind="{click: $parent.navigatePage.bind(null,'customers')}" >Back</button></span>-->
+        <span style="float:right"><button data-bind="click:bkButton" >Back</button></span>
+        <div class="oj-flex" style="flex-wrap: nowrap">
+            <div class="oj-flex oj-flex-item demo-content">
+                <!--data-bind="text: ko.toJSON(listDetail())"-->
+                <div class ="oj-lg-4 oj-xs-12" >
+
+                </div>
+                <div class ="oj-lg-4 oj-xs-12 abc">
+                    
+                    <div> <img data-bind="attr:{src: listDetail().photo}" style="width:40vw;height:50vh;"></div>
+                    <div class ="oj-lg-12 abc" >
+                        <label class="bold">ID:</label>
+                        <input name="txtID" type="text" data-bind="value: listDetail().customer_id" class="hide" /> 
+                        <span data-bind="text: listDetail().customer_id"></span>
+                    </div>
+                    <div class ="oj-lg-12 abc" >
+                        <label style="font-weight:bold">Name:</label>&nbsp;
+
+                        <input name="txtName" type="text" data-bind="value: listDetail().name" class="hide" /> <span data-bind="text: listDetail().name"></span>
+                    </div>
+                    <div class ="oj-lg-12 abc" >
+                        <label style="font-weight:bold">Email:</label>&nbsp;
+                        <input name="txtName" type="text" data-bind="value: listDetail().email" class="hide" /><span data-bind="text: listDetail().email"></span>
+                    </div>
+                    <div class ="oj-lg-12 abc" >
+                        <label style="font-weight:bold">Description:</label>&nbsp;
+                        <input name="txtName" type="text" data-bind="value: listDetail().customer_details" class="hide" /> <span data-bind="text: listDetail().customer_details"></span>
+                    </div>
+                    <div style="float:right"> 
+                        <!--Binding if condition with data-bind it null's the text value it generate button elment so we have to 
+                        put if condition in comment way its better in angular js
+                        
+                        IF you handle input and span from view side using if condition then you just need to set one flag in back of edit true and false
+                        rest your view will handle this. OK or moer easy you toogle class on both the field same first by default
+                        span will have activeDisplay so once edit flag is set in js you toogle that class on span.. wait will show that too.. ok got me 
+                        what i am saying ? YES cool, so line in js code will be minimum-->
+                        <!-- ko if: editFlag() === false-->
+                        <button class="edit"  data-bind="click:editButton">Edit Button</button> 
+                        <!-- /ko -->
+                        <!-- ko if: editFlag()-->
+                        <button class="save" data-bind="click:saveButton">Save Button</button>
+                        <!-- /ko -->
+                    </div>
+                </div>
+
+                <div class ="oj-lg-4 oj-xs-12 ">
+                </div>
+            </div>
+        </div>
+
+    </div>
