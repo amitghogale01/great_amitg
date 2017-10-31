@@ -1,0 +1,31 @@
+[{ 
+    "customer_id":"101",  
+    "name": "Rimi Dev",
+    "email":"RimiD.gmail.com",
+    "customer_details":"This is the fist customer for our product",  
+    "photo":"img/customer1.jpg"
+        
+    },{ 
+    "customer_id":"102",  
+    "name": "Garry Johnson",
+    "email":"GaryJ.gmail.com",
+    "customer_details":"This is the fist customer for our product",  
+    "photo":"img/customer2.jpg"
+        
+    },
+    { 
+    "customer_id":"103",  
+    "name": "Jeff Lawson",
+    "email":"JeffL.gmail.com",
+    "customer_details":"This is the fist customer for our product",  
+    "photo":"img/customer3.jpg"
+        
+    },
+    { 
+    "customer_id":"104",  
+    "name": "Rita Thomas",
+    "email":"RitaT.gmail.com",
+    "customer_details":"This is the fist customer for our product",  
+    "photo":"img/customer4.jpg"
+        
+    }]
