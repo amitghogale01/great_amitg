@@ -60,7 +60,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/customerService', 'viewM
                     console.log(self.listDetail());
                     $(".abc > input, .abc > span").toggleClass('hide');
                     self.editFlag(false);
-                    $(".abc > span").val(self.listDetail());
+                    $(".abc > span").val(self.listDetail([]));
                     
                     
                 }
