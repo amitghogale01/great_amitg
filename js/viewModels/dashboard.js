@@ -8,7 +8,7 @@
 define(['ojs/ojcore', 'knockout', 'jquery','ojs/ojlegend', 'ojs/ojchart', 'ojs/ojtoolbar','ojs/ojlabel', 'ojs/ojradioset'],
  function(oj, ko, $) {
   
-    function DashboardViewModel() {
+    function    DashboardViewModel() {
       var self = this;
         
         /* toggle button variables */
