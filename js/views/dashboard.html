@@ -9,15 +9,13 @@
             <div class="oj-flex">
                 <div class="oj-flex-item oj-lg-2">
                     <oj-label id="">Customers Strength </oj-label>
-                    <oj-radioset id="radiosetBasicDemoId" labelled-by="mainlabelid"
-                       value="" >
-                        <oj-option id="blueopt" value="blue">High</oj-option>
-                        <oj-option id="greenopt" value="green">Very High</oj-option>
-                        <oj-option id="redopt" value="red">Medium</oj-option>
-                        <oj-option id="limeopt" value="lime">Low</oj-option>
-                        <oj-option id="aquaopt" value="aqua">Very Low</oj-option>
-                      </oj-radioset>
- 
+                    <oj-select-one id="basicSelect" value="{{val}}" style="max-width:20em">
+                        <oj-option value="IE">Line</oj-option>
+                        <oj-option value="FF">Bar</oj-option>
+                        <oj-option value="CH">Area</oj-option>
+                        
+                      </oj-select-one>
+
                 </div>
                 <div class="oj-flex-item oj-lg-8">
                     <div id='chart-container'>
