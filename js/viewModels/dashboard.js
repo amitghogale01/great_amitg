@@ -5,12 +5,12 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery','ojs/ojlegend', 'ojs/ojchart', 'ojs/ojtoolbar','ojs/ojlabel', 'ojs/ojradioset'],
+define(['ojs/ojcore', 'knockout', 'jquery','ojs/ojlegend', 'ojs/ojchart', 'ojs/ojselectcombobox'],
  function(oj, ko, $) {
   
     function    DashboardViewModel() {
       var self = this;
-        
+        this.val=ko.observableArrey(["bar"]);
         /* toggle button variables */
         self.stackValue = ko.observable('off');
         self.orientationValue = ko.observable('vertical');
