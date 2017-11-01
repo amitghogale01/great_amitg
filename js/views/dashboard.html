@@ -4,7 +4,7 @@
  -->
 <div class="oj-hybrid-padding">
   <h1>Customer Volume Graphical Representation</h1>
-  <div id='chart-container'>
+  
             
             <div class="oj-flex">
                 <div class="oj-flex-item oj-lg-2">
@@ -19,30 +19,20 @@
 
                 </div>
                 <div class="oj-flex-item oj-lg-8">
-                    <div id='chart-container'>
-            <oj-chart id="barChart"
-                  type=val()[0] 
-                  orientation="[[orientationValue]]"
-                  stack="[[stackValue]]"
-                  series="[[barSeriesValue]]"
-                  groups="[[barGroupsValue]]" 
-                  animation-on-display="auto"
-                  animation-on-data-change="auto"
-                  hover-behavior="dim"
-                 style="max-width:500px;width:100%;height:350px;">
-            </oj-chart>
-            <oj-toolbar id="myToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
-                        style="max-width:500px;width:100%;">
-                <!-- vertical/horizontal toggle button -->
-                <demo-chart-orientation-control id="orientationControl" type="bar" focus-management="none" orientation="{{orientationValue}}">
-                </demo-chart-orientation-control>
-                <span role="separator" aria-orientation="vertical" class="oj-toolbar-separator"></span>
-                <!-- unstacked/stacked toggle button -->
-                <demo-chart-stack-control id="stackControl" type="bar" focus-management="none" stack="{{stackValue}}">
-                </demo-chart-stack-control>
-            </oj-toolbar>
-        </div>
+                    
+                        <oj-chart id="barChart"
+                              type=val()[0] 
+                              orientation="[[orientationValue]]"
+                              stack="[[stackValue]]"
+                              series="[[barSeriesValue]]"
+                              groups="[[barGroupsValue]]" 
+                              animation-on-display="auto"
+                              animation-on-data-change="auto"
+                              hover-behavior="dim"
+                             style="max-width:500px;width:100%;height:350px;">
+                        </oj-chart>
+                   
                 </div>
                
         
-</div>
+            </div>
