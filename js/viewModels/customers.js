@@ -26,6 +26,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'viewModels/customerService', 'viewM
                         {
                             console.log(data);
                             self.dataSource(new oj.ArrayTableDataSource(data));
+                            localstorage.localdata(data);
 
 
 //                            setTimeout(function(){
