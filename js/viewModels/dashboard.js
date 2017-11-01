@@ -5,7 +5,7 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery','ojs/ojlegend', 'ojs/ojchart', 'ojs/ojselectcombobox'],
+define(['ojs/ojcore', 'knockout', 'jquery','ojs/ojchart', 'ojs/ojselectcombobox'],
  function(oj, ko, $) {
   
     function    DashboardViewModel() {
