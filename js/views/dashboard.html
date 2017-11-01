@@ -19,9 +19,9 @@
 
                 </div>
                 <div class="oj-flex-item oj-lg-8">
-                    
-                        <oj-chart id="barChart"
-                              type=val()[0] 
+                    <div id='chart-container'>
+                        <oj-chart id="barChart" data-bind=""
+                              type="val()[0]"
                               orientation="[[orientationValue]]"
                               stack="[[stackValue]]"
                               series="[[barSeriesValue]]"
@@ -31,7 +31,7 @@
                               hover-behavior="dim"
                              style="max-width:500px;width:100%;height:350px;">
                         </oj-chart>
-                   
+                    </div>    
                 </div>
                
         
