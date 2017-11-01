@@ -10,7 +10,7 @@ define(['ojs/ojcore', 'knockout', 'jquery','ojs/ojlegend', 'ojs/ojchart', 'ojs/o
   
     function    DashboardViewModel() {
       var self = this;
-        this.val=ko.observableArray(["bar"]);
+        self.val = ko.observableArray(["bar"]);
         /* toggle button variables */
         self.stackValue = ko.observable('off');
         self.orientationValue = ko.observable('vertical');
